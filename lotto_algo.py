@@ -12,4 +12,13 @@ def generate_number(n): # n개의 무작위한 번호를 추출하기 위한 함
 
     return lucky_nums
 
-print(generate_number(6)) # 6개의 번호 추출
+
+def draw_winning_numbers(): # 최종 당첨번호 7개 (6개의 무작위 넘버와 보너스번호)
+    winning_nums = generate_number(7)
+    print(sorted(winning_nums[:6]) + winning_nums[6:])
+
+
+draw_winning_numbers()
+
+
+
