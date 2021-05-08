@@ -2,7 +2,7 @@
 
 from random import randint
 
-def generate_number(n):  # n개의 무작위한 번호를 추출하기 위한 함수
+def generate_numbers(n):  # n개의 무작위한 번호를 추출하기 위한 함수
     numbers = []
 
     while len(numbers) < n:
@@ -13,7 +13,7 @@ def generate_number(n):  # n개의 무작위한 번호를 추출하기 위한 �
     return numbers
 
 def draw_winning_numbers():  # 최종 당첨번호 7개 (6개의 무작위 넘버와 보너스번호)
-    winning_nums = generate_number(7)
+    winning_nums = generate_numbers(7)
     return sorted(winning_nums[:6]) + winning_nums[6:]
 
 def count_matching_numbers(numbers, winning_numbers):
@@ -30,18 +30,15 @@ def check(numbers, winning_numbers):
     bonus_count = count_matching_numbers(numbers, winning_numbers[6:])
 
     if count == 6:
-        return '1000000000'
+        return 1000000000
     elif count == 5 and bonus_count == 1:
-        return '50000000'
+        return 50000000
     elif count == 5:
-        return '1000000'
+        return 1000000
     elif count == 4:
-        return '50000'
+        return 50000
     elif count == 3:
-        return '5000'
+        return 5000
     else:
-        return '0'
+        return 0
 
-# 테스트
-print(check([2, 4, 11, 14, 25, 40], [4, 12, 14, 28, 40, 41, 6]))
-print(check([2, 4, 11, 14, 25, 40], [2, 4, 10, 11, 14, 40, 25]))
