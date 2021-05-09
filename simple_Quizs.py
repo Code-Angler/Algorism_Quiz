@@ -1,20 +1,9 @@
 # 두 정수 사이의 합
 
 def solution(a, b):
-    answer = 0
-    if b > a:
-        while a <= b:
-            answer += a
-            a += 1
-        return answer
-    elif b < a:
-        while b <= a:
-            answer += b
-            b += 1
-        return answer
-    else:
-        return a
+    if a > b: a, b = b, a
 
+    return sum(range(a,b+1))
 
 first_num = int(input("정수를 입력하세요 :"))
 sec_num = int(input("또 정수를 입력하세요 :"))
