@@ -34,7 +34,7 @@ print("두 정수의 합은 {}입니다!!!".format(solution(first_num, sec_num))
 #     return sorted(answer_01)
 #
 #
-# print(solution_01([2,1,3,4,1])) # 4+4인 8도출력, 리스트에 서로 다른 요소만 더하는것이 목표여서 틀린답
+# print(solution_01([2,1,3,4,1])) # 1+1이 다른요소임에도 불구 하고 2가 출력이 안됨, 틀린답
 
 
 
