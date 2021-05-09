@@ -5,7 +5,9 @@
 # n은 1 이상 100,000,000 이하인 자연수입니다.
 
 def solution(n):
+    answer = 0
     rev_thr = []
+    z = 1
     for i in range(1, 100):
         if (3 ** i) < n:
             a = (n // (3 ** (i-1)))
@@ -13,15 +15,12 @@ def solution(n):
             rev_thr.append(thr)
             if a < 9:
                 rev_thr.append(a // (3))
-    print(rev_thr)
 
-    tenth = 0
-    z = 1
     for j in rev_thr:
         number = ((3 ** (len(rev_thr)-z) * j))
         z += 1
-        tenth += number
-    print(tenth)
+        answer += number
+    return answer
 
-solution(45) # result 7 ,rev_thr = [0,0,2,1]
-solution(125) # result 229, rev_thr = [2,2,1,1,1]
+print(solution(45))  # result 7 ,rev_thr = [0,0,2,1]
+print(solution(125)) # result 229, rev_thr = [2,2,1,1,1]
