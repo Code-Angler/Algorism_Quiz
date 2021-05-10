@@ -28,6 +28,28 @@ print(solution(45))  # result 7 ,rev_thr = [0,0,2,1]
 print(solution(125)) # result 229, rev_thr = [2,2,1,1,1]
 
 
+
+# 문자열 다루기 기본
+
+# 문제 설명
+# 문자열 s의 길이가 4 혹은 6이고, 숫자로만 구성돼있는지 확인해주는 함수, solution을 완성하세요. 예를 들어 s가 "a234"이면 False를 리턴하고 "1234"라면 True를 리턴하면 됩니다.
+
+# 제한 사항
+# s는 길이 1 이상, 길이 8 이하인 문자열입니다.
+
+def solution(s):
+    answer = True
+    if s.isdigit() and ((len(s) == 4) or(len(s)) == 6):
+        return answer
+    else:
+        return False
+
+print(solution("a234")) # result False
+print(solution("1234")) # result True
+
+
+
+
 # 제일 작은 수 제거하기
 #
 # 문제 설명
@@ -47,3 +69,6 @@ def solution(arr):
 
 print(solution([4, 3, 2, 1])) # result [4, 3, 2]
 print(solution([-10])) # result [-1]
+
+
+
