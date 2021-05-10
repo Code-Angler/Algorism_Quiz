@@ -28,6 +28,27 @@ print(solution(45))  # result 7 ,rev_thr = [0,0,2,1]
 print(solution(125)) # result 229, rev_thr = [2,2,1,1,1]
 
 
+# 삼진법  (divmod)이용
+
+
+def solution(n):
+    rev_ternary = ''
+    answer = 0
+    j = 1
+
+    while n > 0:
+        n, mod = divmod(n, 3)
+        rev_ternary += str(mod)
+
+    for i in rev_ternary:
+        number = ((3 ** (len(rev_ternary) - j) * int(i)))
+        j += 1
+        answer += number
+    return answer
+
+print(solution(45))  # result 7 ,rev_thr = [0,0,2,1]
+print(solution(125)) # result 229, rev_thr = [2,2,1,1,1]
+
 
 # 문자열 다루기 기본
 
