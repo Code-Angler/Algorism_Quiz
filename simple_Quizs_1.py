@@ -50,6 +50,21 @@ print(solution(45))  # result 7 ,rev_thr = [0,0,2,1]
 print(solution(125)) # result 229, rev_thr = [2,2,1,1,1]
 
 
+# 3진법 초간단 답 ( 풀이참조 **int )
+
+def solution(n):
+    rev_ternary = ''
+    while n:
+        rev_ternary += str(n % 3)
+        n = n // 3
+
+    answer = int(rev_ternary,3)
+    return answer
+
+print(solution(45))  # result 7 ,rev_thr = [0,0,2,1]
+print(solution(125)) # result 229, rev_thr = [2,2,1,1,1]
+
+
 # 문자열 다루기 기본
 
 # 문제 설명
