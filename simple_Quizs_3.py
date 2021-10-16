@@ -18,3 +18,38 @@ def solution(n, arr1, arr2):
     return answer
 
 print((solution(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28])))
+
+
+# 음양 더하기
+
+def solution(absolutes, signs):
+    answer = 0
+    for i in range(len(absolutes)):
+        if signs[i] :
+            answer += absolutes[i]
+        else:
+            answer -= absolutes[i]
+    return answer
+
+print(solution([4,7,12],[True,False,True]))
+
+# 이상한 문자 만들기(테스트에서 실패, but it is working!!)
+
+def solution(s):
+    answer = ''
+    sprate_words = s.split(" ")
+    for word in sprate_words:
+        for i in range(len(word)):
+            if i % 2 == 0:
+                answer += word[i].upper()
+            else:
+                answer += word[i]
+        answer += " "
+    return answer[:-1]
+
+
+print(solution("try hello world"))
+
+
+
+
